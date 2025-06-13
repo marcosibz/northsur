@@ -4,14 +4,14 @@ document.getElementById("header").innerHTML = `
   </div>
   <img src="assets/img/airplane.png" class="logoair" alt="">
   <nav>
-    <a href="index.html">SHOP</a>
+    <a href="index.html">INICIO</a>
     <a href="#">NEW IN</a>
-    <a href="#">TSSY</a>
+    <a href="mis-pedidos.html">MIS PEDIDOS</a>
     <a href="admin.html">ADMIN</a>
     <a href="login.html">ACCEDER</a>
   </nav>
         <div class="carrito-container">
-    <span class="carrito-icono" onclick="toggleCarrito()">🛒</span>
+    <span class="carrito-icono" onclick="toggleCarrito()"><img src="assets/img/carrito.png" alt=""></span>
     <div class="carrito" style="display: none;">
         <div class="productos-carrito">
             <!-- Los productos se insertarán aquí dinámicamente -->
