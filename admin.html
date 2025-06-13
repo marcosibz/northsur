@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelNow - Descubrí tu próximo destino</title>
+  <link rel="shortcut icon" href="assets/img/logo-viajes.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles/admin.css"/>
+  <link rel="stylesheet" href="styles/index.css"/>
+  <link rel="stylesheet" href="styles/footer.css"/>
+  <script src="js/modulo.js" defer></script>
+  <script src="js/modal.js" defer></script>
+
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main>
+    <h2>¡Explorá el mundo con TravelNow!</h2>
+    <a href="#modal-destino" class="btn-agregar">Agregar nuevo destino</a>
+
+    <section class="productos">
+      <div class="producto">
+        <img src="assets/img/destinos/paris.jpg" alt="Viaje a París">
+        <p class="name">Viaje a París</p>
+        <p class="precio">$1.200.000</p>
+        <p class="descuento">$1.050.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Viaje a París', 1200000)">Reservar ✈️</button>
+      </div>
+
+      <div class="producto">
+        <img src="assets/img/destinos/rio.jpg" alt="Escapada a Río de Janeiro">
+        <p class="name">Escapada a Río de Janeiro</p>
+        <p class="precio">$850.000</p>
+        <p class="descuento">$770.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Río de Janeiro', 850000)">Reservar ✈️</button>
+      </div>
+
+      <div class="producto">
+        <img src="assets/img/destinos/bariloche.jpg" alt="Bariloche Aventura">
+        <p class="name">Bariloche Aventura</p>
+        <p class="precio">$680.000</p>
+        <p class="descuento">$630.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bariloche Aventura', 680000)">Reservar ✈️</button>
+      </div>
+
+      <div class="producto">
+        <img src="assets/img/destinos/machu-picchu.jpg" alt="Tour Machu Picchu">
+        <p class="name">Tour a Machu Picchu</p>
+        <p class="precio">$950.000</p>
+        <p class="descuento">$880.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Machu Picchu', 950000)">Reservar ✈️</button>
+      </div>
+    </section>
+
+    <section class="productos">
+      <div class="producto">
+        <img src="assets/img/destinos/roma.jpg" alt="Escapada Romántica a Roma">
+        <p class="name">Escapada Romántica a Roma</p>
+        <p class="precio">$1.100.000</p>
+        <p class="descuento">$980.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Roma Romántica', 1100000)">Reservar ✈️</button>
+      </div>
+
+      <div class="producto">
+        <img src="assets/img/destinos/ushuaia.jpg" alt="Fin del Mundo - Ushuaia">
+        <p class="name">Fin del Mundo - Ushuaia</p>
+        <p class="precio">$720.000</p>
+        <p class="descuento">$660.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Ushuaia', 720000)">Reservar ✈️</button>
+      </div>
+
+      <div class="producto">
+        <img src="assets/img/destinos/salta.jpg" alt="Norte Argentino: Salta y Jujuy">
+        <p class="name">Norte Argentino: Salta y Jujuy</p>
+        <p class="precio">$680.000</p>
+        <p class="descuento">$610.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Salta y Jujuy', 680000)">Reservar ✈️</button>
+      </div>
+
+      <div class="producto">
+        <img src="assets/img/destinos/nueva-york.jpg" alt="Nueva York Experience">
+        <p class="name">Nueva York Experience</p>
+        <p class="precio">$1.500.000</p>
+        <p class="descuento">$1.350.000 <span>con pago anticipado</span></p>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Nueva York', 1500000)">Reservar ✈️</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal: Agregar nuevo destino -->
+<div id="modal-destino" class="modal-form">
+  <div class="modal-contenido">
+   <span class="cerrar" id="cerrar-modal">&times;</span>
+    <h3>Agregar nuevo destino</h3>
+    <form id="form-destino">
+      <label for="nombre">Nombre del destino</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="localidad">Localidad</label>
+      <input type="text" id="localidad" name="localidad" required>
+
+      <label for="imagen">Imagen de referencia (URL)</label>
+      <input type="url" id="imagen" name="imagen" required>
+
+      <label for="precio">Precio</label>
+      <input type="number" id="precio" name="precio" required>
+
+      <label for="categoria">Categoría</label>
+      <input type="text" id="categoria" name="categoria" required>
+
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+      <button type="submit" class="btn-agregar">Guardar destino</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
