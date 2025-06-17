@@ -1,0 +1,63 @@
+.carrito {
+
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    width: 15vw; /* Ajusta este valor si querés más/menos ancho */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1.4rem;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+.carrito .producto {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.carrito .cantidad {
+    display: flex;
+    align-items: center;
+}
+
+.carrito .cantidad input {
+    width: 3vw;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.carrito .eliminar {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.modern-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.modern-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modern-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
