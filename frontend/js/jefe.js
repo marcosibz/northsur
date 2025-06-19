@@ -74,5 +74,28 @@ document.querySelectorAll('select').forEach(select => {
   });
 });
 
+// cargar productos
+
+  const form = document.getElementById("form-producto");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const codigo = document.getElementById("codigo").value;
+    const descripcion = document.getElementById("descripcion").value;
+    const precio = document.getElementById("precio").value;
+
+    // Obtenemos productos anteriores o lista vacía
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
+
+    // Agregamos el nuevo
+    productos.push({ codigo, descripcion, precio });
+
+    // Guardamos en localStorage
+    localStorage.setItem("productos", JSON.stringify(productos));
+
+    alert("Producto agregado correctamente.");
+    form.reset();
+  });
 
     
