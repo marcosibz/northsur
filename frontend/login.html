@@ -9,24 +9,22 @@
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/login.css">
   <link rel="shortcut icon" href="assets/img/airplane.png" type="image/x-icon">
-  <script src="js/login.js" defer></script>
-  <script src="js/modulo.js" defer></script>
 </head>
 <body>
-
-    <div id="header"></div>
- 
-<br>
-<div class="bloque">
-<div class="form-container">
-	<p class="title">Inicio de sesion</p>
-	<form class="form">
-
-		<select name="tipo_usuario">
-  		<option value="cliente" selected>Cliente</option>
+	
+	<div id="header"></div>
+	
+	<br>
+	<div class="bloque">
+		<div class="form-container">
+			<p class="title">Inicio de sesion</p>
+			<form class="form">
+				
+				<select name="tipo_usuario">
+					<option value="cliente" selected>Cliente</option>
   		<option value="jefe_ventas">Jefe de ventas</option>
   		</select>
-
+		  
 		<div class="input-group">
 			<label for="username">Nombre</label>
 			<input type="text" name="nombre" id="username" placeholder="">
@@ -75,7 +73,9 @@
 </div>
 </div>
 <br>
-    <div id="footer" style="top: 0%;">
-    </div>	
+<div id="footer" style="top: 0%;">
+</div>	
 </body>
+<script src="js/login.js"></script>
+<script src="js/modulo.js"></script>
 </html>

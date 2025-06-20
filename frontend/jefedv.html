@@ -11,41 +11,41 @@
   <link rel="stylesheet" href="styles/carrito.css">
   <link rel="stylesheet" href="styles/jefedv.css">
   <link rel="shortcut icon" href="assets/img/airplane.png" type="image/x-icon">
-  <script src="js/jefe.js" defer></script>
-  <script src="js/modulo.js" defer></script> 
 </head>
 <body>
-
-    <div id="header">
-    </div>
-
-<!-- pedidos pendientes o entregados -->
-
+  
+  <div id="header">
+  </div>
+  
+  <!-- pedidos pendientes o entregados -->
+  
   <h2 style="text-align: center;">Listado de Pedidos</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id_pedido</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>fecha_pedido</th>
-      <th>total</th>
-    </tr>
-  </thead>
-  <tbody id="tablaPedidos">
-  </tbody>
-</table>
-
-<!-- agregar un producto nuevo -->
-
-<form id="form-producto">
-  <input type="text" id="codigo" placeholder="Código" required><br>
-  <input type="text" id="descripcion" placeholder="Descripción" required><br>
-  <input type="number" id="precio" placeholder="Precio" required><br>
-  <button type="submit">Agregar producto</button>
-</form>
-
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Id_pedido</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>fecha_pedido</th>
+        <th>total</th>
+      </tr>
+    </thead>
+    <tbody id="tablaPedidos">
+    </tbody>
+  </table>
+  <br>
+  <!-- agregar un producto nuevo -->
+  
+  <form id="form-producto">
+    <input type="text" id="codigo" placeholder="Código" required><br>
+    <input type="text" id="descripcion" placeholder="Descripción" required><br>
+    <input type="number" id="precio" placeholder="Precio" required><br>
+    <button type="submit">Agregar producto</button>
+  </form>
+  
   <div id="footer">
-</div>
+  </div>
 </body>
+<script src="js/jefe.js"></script>
+<script src="js/modulo.js"></script> 

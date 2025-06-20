@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(usuario => {
       if (usuario) {
-        localStorage.setItem('tipo_usuario', tipo_usuario);
+        localStorage.setItem('tipo_usuario', usuario.tipo_usuario);
         localStorage.setItem('nombre', usuario.nombre);
         alert('Bienvenido');
         window.location.href = 'index.html';
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error en el login:', err);
     });
   });
-});
+
 
 
 
