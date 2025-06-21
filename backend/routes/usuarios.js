@@ -37,6 +37,7 @@ router.post('/login', async (req, res) => {
 
 module.exports = router;
 
+<<<<<<< HEAD
 router.get('/protected', (req, res) => {
     const tipo_usuario = req.session?.tipo_usuario;
     if (tipo_usuario) {
@@ -45,3 +46,8 @@ router.get('/protected', (req, res) => {
         res.status(401).json({ user: false });
     }
 });
+=======
+
+
+
+>>>>>>> dd866967dc20c7fda6ca3524e1702f100da7e523

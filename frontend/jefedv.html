@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viajes Conectados</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/carrito.css">
+  <link rel="stylesheet" href="styles/jefedv.css">
+  <link rel="shortcut icon" href="assets/img/airplane.png" type="image/x-icon">
+</head>
+<body>
+  
+  <div id="header">
+  </div>
+  
+  <!-- pedidos pendientes o entregados -->
+  
+  <h2 style="text-align: center;">Listado de Pedidos</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Id_pedido</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>fecha_pedido</th>
+        <th>total</th>
+      </tr>
+    </thead>
+    <tbody id="tablaPedidos">
+    </tbody>
+  </table>
+  <br>
+  <!-- agregar un producto nuevo -->
+  
+  <form id="form-producto">
+    <input type="text" id="codigo" placeholder="Código" required><br>
+    <input type="text" id="descripcion" placeholder="Descripción" required><br>
+    <input type="number" id="precio" placeholder="Precio" required><br>
+    <button type="submit">Agregar producto</button>
+  </form>
+  
+  <div id="footer">
+  </div>
+</body>
+<script src="js/jefe.js"></script>
+<script src="js/modulo.js"></script> 
