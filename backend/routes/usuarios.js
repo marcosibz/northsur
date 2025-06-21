@@ -36,3 +36,14 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
+
+module.exports = router;
+
+router.get('/protected', (req, res) => {
+    const tipo_usuario = req.session?.tipo_usuario;
+    if (tipo_usuario) {
+        res.json({ user: true, tipo_usuario });
+    } else {
+        res.status(401).json({ user: false });
+    }
+});
