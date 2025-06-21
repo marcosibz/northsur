@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viajes Conectados</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/carrito.css">
-  <link rel="shortcut icon" href="/assets/img/airplane.png" type="image/x-icon">
-  <script src="js/modulo.js"defer></script>
-  <script src="js/login.js"defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajes Conectados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="frontend/styles/index.css">
+    <link rel="stylesheet" href="frontend/styles/footer.css">
+    <link rel="stylesheet" href="frontend/styles/header.css">
+    <link rel="stylesheet" href="frontend/styles/carrito.css">
+    <link rel="shortcut icon" href="assets/img/airplane.png" type="image/x-icon">
+    <script src="frontend/js/modulo.js" defer></script>
+    <script src="frontend/js/login.js" defer></script>
 </head>
 <body>
-
+  
   <div id="header"></div>
   
   <!-- imagen de fondo -->
-
+  
   <section class="hero">
-  <div class="overlay">
-    <h1>Vuelos baratos, compará y pagá menos por viajar</h1>
-  </div>
-</section>
-
-
+    <div class="overlay">
+      <h1>Vuelos baratos, compará y pagá menos por viajar</h1>
+    </div>
+  </section>
+  
+  
   <!-- destacados -->
-<section class="destacados">
-
-  <br>
-  <h2 style="text-align: center;">Viajes destacados</h2>
-  <div class="grid-viajes">
-    <div class="tarjeta">
-      <img src="/assets/img/riodj.avif" alt="Río de Janeiro">
-      <div class="info">
-        <h4>Río de Janeiro</h4>
-        <p>Desde Buenos Aires</p>
-        <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Rio De Janerio', 242000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+  <section class="destacados">
+    
+    <br>
+    <h2 style="text-align: center;">Viajes destacados</h2>
+    <div class="grid-viajes">
+      
+      <div class="tarjeta" id="contenedor-productos">
+        <div class="info">
+          <br>  
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Rio De Janerio', 242000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
       </div>
-    </div>
-
-    <div class="tarjeta">
-      <img src="/assets/img/madrid.avif" alt="Madrid">
-      <div class="info">
-        <h4>Madrid</h4>
-        <p>Desde Buenos Aires</p>
-        <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('España, Madrid', 1047366)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+      
+      <div class="tarjeta">
+        <img src="/assets/img/riodj.avif" alt="Río de Janeiro">
+        <div class="info">
+          <h4>Río de Janeiro</h4>
+          <p>Desde Buenos Aires</p>
+          <br>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Rio De Janerio', 242000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
       </div>
-    </div>
-
-    <div class="tarjeta">
-      <img src="/assets/img/miami.avif" alt="Miami">
-      <div class="info">
-        <h4>Miami</h4>
-        <p>Desde Buenos Aires</p>
-        <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Miamee', 700232)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+      
+      <div class="tarjeta">
+        <img src="/assets/img/madrid.avif" alt="Madrid">
+        <div class="info">
+          <h4>Madrid</h4>
+          <p>Desde Buenos Aires</p>
+          <br>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('España, Madrid', 1047366)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
       </div>
-    </div>
-
-    <div class="tarjeta">
-      <img src="/assets/img/chile.avif" alt="Santiago de Chile">
-      <div class="info">
-        <h4>Santiago de Chile</h4>
-        <p>Desde Buenos Aires</p>
-        <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Chile, Santiago', 227844)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+      
+      <div class="tarjeta">
+        <img src="/assets/img/miami.avif" alt="Miami">
+        <div class="info">
+          <h4>Miami</h4>
+          <p>Desde Buenos Aires</p>
+          <br>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Miamee', 700232)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
       </div>
-    </div>
-
-    <div class="tarjeta">
-      <img src="/assets/img/roma.avif" alt="Roma">
-      <div class="info">
-        <h4>Roma</h4>
-        <p>Desde Buenos Aires</p>
-        <br>
+      
+      <div class="tarjeta">
+        <img src="/assets/img/chile.avif" alt="Santiago de Chile">
+        <div class="info">
+          <h4>Santiago de Chile</h4>
+          <p>Desde Buenos Aires</p>
+          <br>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Chile, Santiago', 227844)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      
+      <div class="tarjeta">
+        <img src="/assets/img/roma.avif" alt="Roma">
+        <div class="info">
+          <h4>Roma</h4>
+          <p>Desde Buenos Aires</p>
+          <br>
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Italia, Roma', 1062834)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
+    
     <div class="tarjeta">
       <img src="/assets/img/bariloche.avif" alt="San Carlos de Bariloche">
       <div class="info">
@@ -91,8 +99,8 @@
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('San Carlos de Bariloche', 69785)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
-        <div class="tarjeta">
+    
+    <div class="tarjeta">
       <img src="/assets/img/cana.avif" alt="Punta Cana">
       <div class="info">
         <h4>Punta Cana</h4>
@@ -101,8 +109,8 @@
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Punta Cana', 761070)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
-        <div class="tarjeta">
+    
+    <div class="tarjeta">
       <img src="/assets/img/cancun.avif" alt="Cancun">
       <div class="info">
         <h4>Cancun</h4>
@@ -111,8 +119,8 @@
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Cancun', 721000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
-        <div class="tarjeta">
+    
+    <div class="tarjeta">
       <img src="/assets/img/cordoba.avif" alt="Cordoba">
       <div class="info">
         <h4>Cordoba</h4>
@@ -121,8 +129,8 @@
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Cordoba', 45330)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
-      <div class="tarjeta">
+    
+    <div class="tarjeta">
       <img src="/assets/img/newyork.avif" alt="Nueva York">
       <div class="info">
         <h4>Nueva York</h4>
@@ -131,8 +139,8 @@
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Nueva York', 872606)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
-      <div class="tarjeta">
+    
+    <div class="tarjeta">
       <img src="/assets/img/jujuy.avif" alt="Jujuy">
       <div class="info">
         <h4>Jujuy</h4>
@@ -141,8 +149,8 @@
         <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Jujuy', 56000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
-
-      <div class="tarjeta">
+    
+    <div class="tarjeta">
       <img src="/assets/img/florianopolis.avif" alt="Florianopolis">
       <div class="info">
         <h4>Florianopolis</h4>
@@ -154,23 +162,23 @@
   </div>
 </section>
 
-  <!-- tips -->
+<!-- tips -->
 <section class="tips-section">
   <div class="tips-header">
     <h2>Recomendaciones y tips para viajar barato</h2>
     <a href="" class="see-all">Ver todos</a>
   </div>
-
+  
   <div class="tips-cards">
     <div class="tip-card">
-       <img src="/assets/img/escalador.webp" alt="Escala voluntaria"> 
+      <img src="/assets/img/escalador.webp" alt="Escala voluntaria"> 
       <div class="tip-info">
         <span class="tip-date">Hace 5 días</span>
         <h3>¿Cuánto tiempo calcular para una escala voluntaria? Tips para conexiones</h3>
         <p>Descubrí cuánto tiempo calcular para una escala voluntaria o un vuelo multidestino y no perderte el avión.</p>
       </div>
     </div>
-
+    
     <div class="tip-card">
       <img src="/assets/img/misiones.jpg" alt="Misiones Argentina">
       <div class="tip-info">
@@ -179,7 +187,7 @@
         <p>Estas son las mejores cosas que hacer en Misiones aparte de las Cataratas del Iguazú.</p>
       </div>
     </div>
-
+    
     <div class="tip-card">
       <img src="/assets/img/puntacana2.webp" alt="Punta Cana">
       <div class="tip-info">
@@ -188,7 +196,7 @@
         <p>Descubrí cuántos días se recomienda ir a Punta Cana y qué no te podés perder.</p>
       </div>
     </div>
-
+    
     <div class="tip-card">
       <img src="/assets/img/flor2.jpg" alt="Florianópolis">
       <div class="tip-info">
@@ -202,7 +210,8 @@
 <br>
 
 
-  <div id="footer"></div>
+<div id="footer">  
+</div>
 
 </body>
 </html>

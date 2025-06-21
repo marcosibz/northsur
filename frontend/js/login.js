@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('form').addEventListener('submit', (e) => {
+  const form = document.querySelector('form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const email = document.querySelector('input[name=email]').value;
@@ -16,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(usuario => {
       if (usuario) {
+        // Guarda el estado de logueo y el tipo de usuario seleccionado
+        localStorage.setItem('usuario_logueado', 'true');
         localStorage.setItem('tipo_usuario', tipo_usuario);
-        localStorage.setItem('nombre', usuario.nombre);
         alert('Bienvenido');
         window.location.href = 'index.html';
       } else {
@@ -29,6 +33,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-
-

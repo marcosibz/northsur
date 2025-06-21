@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form-agregar');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const codigo = form.codigo.value;
+    const descripcion = form.descripcion.value;
+    const precio = form.precio.value;
+
+    const nuevoProducto = { codigo, descripcion, precio };
+    let productos = JSON.parse(localStorage.getItem('productos')) || [];
+    productos.push(nuevoProducto);
+    localStorage.setItem('productos', JSON.stringify(productos));
+
+    alert('Producto agregado con éxito');
+    form.reset();
+  });
+});
+
 fetch('http://localhost:3000/api/pedidos')
   .then(res => res.json())
   .then(data => {
@@ -75,4 +93,5 @@ document.querySelectorAll('select').forEach(select => {
 });
 
 
-    
+
+

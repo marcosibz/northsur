@@ -8,7 +8,7 @@ body{
     background: #f5f9ff;
 }
 
-.form-container {
+#form-container {
   width: 320px;
   border-radius: 0.75rem;
   /* background-color: #f8f9fd; */
