@@ -19,6 +19,16 @@ body {
 
 }
 
+.grid{
+  max-width: 1300px; /* limita el ancho total */
+  margin: 0 auto; /* centra el grid */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
 .tarjeta {
   position: relative;
   overflow: hidden;

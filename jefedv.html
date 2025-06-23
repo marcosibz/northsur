@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viajes Conectados</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="frontend/styles/index.css">
-  <link rel="stylesheet" href="frontend/styles/footer.css">
-  <link rel="stylesheet" href="frontend/styles/header.css">
-  <link rel="stylesheet" href="frontend/styles/carrito.css">
-  <link rel="stylesheet" href="frontend/styles/jefedv.css">
-  <link rel="shortcut icon" href="frontend/assets/img/airplane.png" type="image/x-icon">
-  <script src="frontend/js/modulo.js" defer></script>
-  <script src="frontend/js/jefe.js" defer></script>
-  <script src="frontend/js/login.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajes Conectados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/styles/index.css">
+    <link rel="stylesheet" href="/frontend/styles/footer.css">
+    <link rel="stylesheet" href="/frontend/styles/header.css">
+    <link rel="stylesheet" href="/frontend/styles/carrito.css">
+    <link rel="stylesheet" href="/frontend/styles/jefedv.css">
+    <link rel="stylesheet" href="/frontend/styles/login.css">
+    <link rel="shortcut icon" href="/frontend/assets/img/airplane.png" type="image/x-icon">
+    <script src="/frontend/js/jefe.js" defer></script>
+    <script src="/frontend/js/modulo.js" defer></script> 
 </head>
 <body>
-
-    <div id="header">
-    </div>
-
-  <h2 style="text-align: center;">Listado de Pedidos</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id_pedido</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>fecha_pedido</th>
-      <th>total</th>
-    </tr>
-  </thead>
-  <tbody id="tablaPedidos">
-    
-  </tbody>
-</table>
-
-    <!-- agregar un producto nuevo -->
-  <h1>Agregar producto</h1>
-  <form id="form-agregar">
-    <input type="text" name="codigo" placeholder="Código del producto" required>
-    <input type="text" name="descripcion" placeholder="Descripción" required>
-    <input type="number" name="precio" placeholder="Precio" required>
-    <button type="submit">Agregar</button>
-  </form>
   
+  <div id="header">
+  </div>
+  
+    <!-- agregar un producto nuevo -->
+     <br>
+  <div class="bloque">
+    
+  <form class="form2" id="form-producto">
+       <p class="form-title">Agregar Producto</p>
+        <div class="input-container">
+          <input type="text" id="codigo" placeholder="Código" required><br>
+          <span>
+          </span>
+      </div>
+      <div class="input-container">
+          <input type="text" id="descripcion" placeholder="Descripción" required><br>
+        </div>
+        <div class="input-container">
+          <input type="number" id="precio" placeholder="Precio" required><br>
+        </div>
+         <button type="submit" class="submit">
+        Agregar Producto
+      </button>
+   </form>
+  </div>
+  <br>
+  <!-- pedidos pendientes o entregados -->
+  
+  <h2 style="text-align: center;">Listado de Pedidos</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Id_pedido</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>fecha_pedido</th>
+        <th>total</th>
+      </tr>
+    </thead>
+    <tbody id="tablaPedidos">
+    </tbody>
+  </table>
+  <br>
+
   <div id="footer">
   </div>
 </body>

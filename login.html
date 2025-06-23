@@ -4,13 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Viajes Conectados</title>
-		<link rel="stylesheet" href="frontend/styles/index.css">
-		<link rel="stylesheet" href="frontend/styles/footer.css">
-		<link rel="stylesheet" href="frontend/styles/header.css">
-		<link rel="stylesheet" href="frontend/styles/login.css">
-		<link rel="shortcut icon" href="assets/img/airplane.png" type="image/x-icon">
-		<script src="frontend/js/modulo.js" defer></script>
-		<script src="frontend/js/login.js" defer></script>
+		<link rel="stylesheet" href="/frontend/styles/index.css">
+		<link rel="stylesheet" href="/frontend/styles/footer.css">
+		<link rel="stylesheet" href="/frontend/styles/header.css">
+		<link rel="stylesheet" href="/frontend/styles/login.css">
+		<link rel="shortcut icon" href="/assets/img/airplane.png" type="image/x-icon">
+		<script src="/frontend/js/modulo.js" defer></script>
+		<script src="/frontend/js/login.js" defer></script>
 </head>
 <body>
 
@@ -20,9 +20,9 @@
 <div class="bloque">
 <div class="form-login" id="form-container">
 	<p class="title">Inicio de sesion</p>
-	<form class="form">
+	<form class="form" id="form">
 
-		<select name="tipo_usuario">
+		<select name="tipo_usuario" id="tipo_usuario">
   		<option value="cliente" selected>Cliente</option>
   		<option value="jefe_ventas">Jefe de ventas</option>
   		</select>
@@ -69,9 +69,6 @@
 			</svg>
 		</button>
 	</div>
-	<!-- <p class="signup">No tenes cuenta?
-		<a rel="noopener noreferrer" href="register.html" class="register">Registrate</a>
-	</p> -->
 </div>
 </div>
 <br>
@@ -79,6 +76,4 @@
     </div>	
 
 </body>
-<script src="js/login.js"></script>
-<script src="js/modulo.js"></script>
 </html>

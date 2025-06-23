@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viajes Conectados</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="frontend/styles/index.css">
-    <link rel="stylesheet" href="frontend/styles/footer.css">
-    <link rel="stylesheet" href="frontend/styles/header.css">
-    <link rel="stylesheet" href="frontend/styles/carrito.css">
-    <link rel="shortcut icon" href="assets/img/airplane.png" type="image/x-icon">
-    <script src="frontend/js/modulo.js" defer></script>
-    <script src="frontend/js/login.js" defer></script>
+    <link rel="stylesheet" href="/frontend/styles/index.css">
+    <link rel="stylesheet" href="/frontend/styles/footer.css">
+    <link rel="stylesheet" href="/frontend/styles/header.css">
+    <link rel="stylesheet" href="/frontend/styles/carrito.css">
+    <link rel="shortcut icon" href="/frontend/assets/img/airplane.png" type="image/x-icon">
+    <script src="/frontend/js/modulo.js" defer></script>
+    <script src="/frontend/js/login.js" defer></script>
 </head>
 <body>
-  
+
+    <!-- header y carrito -->
   <div id="header"></div>
+  <div class="carrito" style="display:none;">
+  <h3>Carrito</h3>
+  <div class="productos-carrito"></div>
+  <div class="total"></div>
+</div>
   
-  <!-- imagen de fondo -->
+  <!-- imagen tipo banner -->
   
   <section class="hero">
     <div class="overlay">
@@ -31,132 +37,140 @@
     
     <br>
     <h2 style="text-align: center;">Viajes destacados</h2>
-    <div class="grid-viajes">
+    <div class="grid-viajes" id="contenedor-productos">
       
-      <div class="tarjeta" id="contenedor-productos">
+    </div>
+  
+      <div class="grid">
+       <div class="tarjeta">
+        <img src="/frontend/assets/img/riodj.avif" alt="Río de Janeiro">
         <div class="info">
-          <br>  
-          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Rio De Janerio', 242000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
-        </div>
-      </div>
-      
-      <div class="tarjeta">
-        <img src="/assets/img/riodj.avif" alt="Río de Janeiro">
-        <div class="info">
-          <h4>Río de Janeiro</h4>
+          <h4>Paquetes a Rio de Janeiro</h4>
+          <p>12 dias / 11 noches</p>
           <p>Desde Buenos Aires</p>
           <br>
-          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Rio De Janerio', 242000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Rio De Janerio', 536000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
       </div>
       
       <div class="tarjeta">
-        <img src="/assets/img/madrid.avif" alt="Madrid">
+        <img src="/frontend/assets/img/madrid.avif" alt="Madrid">
         <div class="info">
-          <h4>Madrid</h4>
+          <h4>Paquetes a Madrid</h4>
+          <p>10 dias / 9 noches</p>
           <p>Desde Buenos Aires</p>
           <br>
-          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('España, Madrid', 1047366)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('España, Madrid', 446000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
       </div>
       
       <div class="tarjeta">
-        <img src="/assets/img/miami.avif" alt="Miami">
+        <img src="/frontend/assets/img/miami.avif" alt="Miami">
         <div class="info">
-          <h4>Miami</h4>
+          <h4>Paquetes a Miami</h4>
+          <p>15 dias / 14 noches</p>
           <p>Desde Buenos Aires</p>
           <br>
-          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Miamee', 700232)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Miamee', 512000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
       </div>
       
       <div class="tarjeta">
-        <img src="/assets/img/chile.avif" alt="Santiago de Chile">
+        <img src="/frontend/assets/img/chile.avif" alt="Santiago de Chile">
         <div class="info">
-          <h4>Santiago de Chile</h4>
+          <h4>Paquetes a Santiago de Chile</h4>
+          <p>11 dias / 10 noches</p>
           <p>Desde Buenos Aires</p>
           <br>
-          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Chile, Santiago', 227844)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+          <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Chile, Santiago', 751800)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
       </div>
       
       <div class="tarjeta">
-        <img src="/assets/img/roma.avif" alt="Roma">
+        <img src="/frontend/assets/img/roma.avif" alt="Roma">
         <div class="info">
           <h4>Roma</h4>
+          <p>16 dias / 14 noches</p>
           <p>Desde Buenos Aires</p>
           <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Italia, Roma', 1062834)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Italia, Roma', 2500267)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
       </div>
-    </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/bariloche.avif" alt="San Carlos de Bariloche">
+      <img src="/frontend/assets/img/bariloche.avif" alt="San Carlos de Bariloche">
       <div class="info">
-        <h4>San Carlos de Bariloche</h4>
+        <h4>Paquetes a San Carlos de Bariloche</h4>
+        <p>31 dias / 30 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('San Carlos de Bariloche', 69785)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('San Carlos de Bariloche', 1168123)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/cana.avif" alt="Punta Cana">
+      <img src="/frontend/assets/img/cana.avif" alt="Punta Cana">
       <div class="info">
-        <h4>Punta Cana</h4>
+        <h4>Paquetes a Punta Cana</h4>
+        <p>13 dias / 13 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Punta Cana', 761070)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Punta Cana', 964915)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/cancun.avif" alt="Cancun">
+      <img src="/frontend/assets/img/cancun.avif" alt="Cancun">
       <div class="info">
-        <h4>Cancun</h4>
+        <h4>Paquetes a Cancun</h4>
+        <p>11 dias / 10 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Cancun', 721000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Cancun', 1100330)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/cordoba.avif" alt="Cordoba">
+      <img src="/frontend/assets/img/cordoba.avif" alt="Cordoba">
       <div class="info">
-        <h4>Cordoba</h4>
+        <h4>Paquetes a Cordoba</h4>
+        <p>4 dias / 4 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Cordoba', 45330)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Cordoba', 473567)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/newyork.avif" alt="Nueva York">
+      <img src="/frontend/assets/img/newyork.avif" alt="Nueva York">
       <div class="info">
-        <h4>Nueva York</h4>
+        <h4>Paquetes a Nueva York</h4>
+        <p>11 dias / 9 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Nueva York', 872606)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('USA, Nueva York', 1763876)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/jujuy.avif" alt="Jujuy">
+      <img src="/frontend/assets/img/jujuy.avif" alt="Jujuy">
       <div class="info">
         <h4>Jujuy</h4>
+        <p>7 dias / 7 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Jujuy', 56000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Jujuy', 261000)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
     
     <div class="tarjeta">
-      <img src="/assets/img/florianopolis.avif" alt="Florianopolis">
+      <img src="/frontend/assets/img/florianopolis.avif" alt="Florianopolis">
       <div class="info">
-        <h4>Florianopolis</h4>
+        <h4>Paquetes a Florianopolis</h4>
+        <p>31 dias / 30 noches</p>
         <p>Desde Buenos Aires</p>
         <br>
-        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Florianopolis', 208750)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="modern-btn" class="btn-agregar" onclick="agregarAlCarrito('Florianopolis', 950956)"><span>Agregar</span><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </div>
   </div>
@@ -171,7 +185,7 @@
   
   <div class="tips-cards">
     <div class="tip-card">
-      <img src="/assets/img/escalador.webp" alt="Escala voluntaria"> 
+      <img src="/frontend/assets/img/escalador.webp" alt="Escala voluntaria"> 
       <div class="tip-info">
         <span class="tip-date">Hace 5 días</span>
         <h3>¿Cuánto tiempo calcular para una escala voluntaria? Tips para conexiones</h3>
@@ -180,7 +194,7 @@
     </div>
     
     <div class="tip-card">
-      <img src="/assets/img/misiones.jpg" alt="Misiones Argentina">
+      <img src="/frontend/assets/img/misiones.jpg" alt="Misiones Argentina">
       <div class="tip-info">
         <span class="tip-date">Hace 1 semana</span>
         <h3>Las mejores cosas que hacer en Misiones, Argentina</h3>
@@ -189,7 +203,7 @@
     </div>
     
     <div class="tip-card">
-      <img src="/assets/img/puntacana2.webp" alt="Punta Cana">
+      <img src="/frontend/assets/img/puntacana2.webp" alt="Punta Cana">
       <div class="tip-info">
         <span class="tip-date">Hace 1 semana</span>
         <h3>¿Cuántos días se recomienda ir a Punta Cana?</h3>
@@ -198,7 +212,7 @@
     </div>
     
     <div class="tip-card">
-      <img src="/assets/img/flor2.jpg" alt="Florianópolis">
+      <img src="/frontend/assets/img/flor2.jpg" alt="Florianópolis">
       <div class="tip-info">
         <span class="tip-date">Hace 1 semana</span>
         <h3>¿Cuántos días se recomienda ir a Florianópolis?</h3>
@@ -206,6 +220,7 @@
       </div>
     </div>
   </div>
+</div>
 </section>
 <br>
 
@@ -214,6 +229,4 @@
 </div>
 
 </body>
-<script src="js/modulo.js"></script>
-<script src="js/login.js"></script>
 </html>

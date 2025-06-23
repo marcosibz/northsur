@@ -33,10 +33,11 @@ footer {
 
 .social-icons a {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1em;
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
 }
